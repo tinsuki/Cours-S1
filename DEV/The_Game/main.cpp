@@ -1,9 +1,8 @@
 #include <iostream>
-
-using namespace std;
+#include "typeDef.h"
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    List hand;
     return 0;
 }
