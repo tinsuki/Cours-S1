@@ -10,6 +10,10 @@
 
 spool vider_base_gestloc.out
 
+DELETE DPE;
+
+DELETE VISITE;
+
 DELETE LOCATION;
 
 DELETE BIEN;

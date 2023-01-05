@@ -17,7 +17,7 @@ CREATE TABLE AGENCE
   adresse       VARCHAR2(255) NOT NULL,
   contact       VARCHAR2(255) NOT NULL,
   CONSTRAINT PK_Agence PRIMARY KEY (idAgence),
-  CONSTRAINT UC_Contact UNIQUE (contact)
+  CONSTRAINT UC_Contact_agence UNIQUE (contact)
 );
 
 set echo on
@@ -33,7 +33,9 @@ CREATE TABLE PROPRIETAIRE
   mail   VARCHAR2(255),
   iban   VARCHAR2(34) NOT NULL,
   CONSTRAINT PK_Proprietaire PRIMARY KEY (idPropri),
-  CONSTRAINT UC_tel_mail_iban_propri UNIQUE (tel, mail, iban)
+  CONSTRAINT UC_tel_propri UNIQUE (tel),
+  CONSTRAINT UC_mail_propri UNIQUE (mail),
+  CONSTRAINT UC_iban_propri UNIQUE (iban)
 );
 
 set echo on
@@ -48,10 +50,10 @@ CREATE TABLE LOCATAIRE
   tel                CHAR(10) NOT NULL,
   mail               VARCHAR2(255),
   iban               VARCHAR2(34) NOT NULL,
-  CONSTRAINT PK_Locataire PRIMARY KEY (idLocataire)
-  CONSTRAINT UC_tel UNIQUE (tel),
-  CONSTRAINT UC_mail UNIQUE (mail),
-  CONSTRAINT UC_iban UNIQUE (iban)
+  CONSTRAINT PK_Locataire PRIMARY KEY (idLocataire),
+  CONSTRAINT UC_tel_loc UNIQUE (tel),
+  CONSTRAINT UC_mail_loc UNIQUE (mail),
+  CONSTRAINT UC_iban_loc UNIQUE (iban)
 );
 
 set echo on
@@ -64,7 +66,8 @@ CREATE TABLE SYNDIC
   nom     VARCHAR2(50) NOT NULL,
   prenom  VARCHAR2(50) NOT NULL,
   contact VARCHAR2(255) NOT NULL,
-  CONSTRAINT PK_syndic PRIMARY KEY (idSyndic)
+  CONSTRAINT PK_syndic PRIMARY KEY (idSyndic),
+  CONSTRAINT CHK_contact_syndic UNIQUE (contact)
 );
 
 set echo on
@@ -110,7 +113,7 @@ CREATE TABLE VISITE
   idBien       NUMBER   NOT NULL,
   dateVisite   DATE     NOT NULL,
   heure        NUMBER   NOT NULL,
-  retour       VARCHAR2,
+  retour       VARCHAR2(500),
   CONSTRAINT PK_visite PRIMARY KEY (idBien, dateVisite, heure),
   CONSTRAINT CHK_heure CHECK (heure >= 0.0 and heure <= 24.0)
 );
@@ -128,7 +131,7 @@ CREATE TABLE DPE
   classeClimat    CHAR     NOT NULL,
   consomation     NUMBER   NOT NULL,
   emissions       NUMBER   NOT NULL,
-  mention         VARCHAR2,
+  mention         VARCHAR2(30),
   CONSTRAINT PK_DPE PRIMARY KEY (IDBIEN, DATEDEBUT),
   CONSTRAINT CHK_classeEnergie CHECK (classeEnergie >= 'A' and classeEnergie <= 'G'),
   CONSTRAINT CHK_classeClimat CHECK (classeClimat >= 'A' and classeClimat <= 'G'),

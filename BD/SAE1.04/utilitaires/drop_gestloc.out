@@ -10,24 +10,15 @@ Table dropped.
 
 Table dropped.
 
-DROP TABLE LOCATAIRE CASCADE CONSTRAINT
-           *
-ERROR at line 1:
-ORA-00942: table or view does not exist 
 
+Table dropped.
 
 
 Table dropped.
 
-DROP TABLE VISITE CASCADE CONSTRAINT
-           *
-ERROR at line 1:
-ORA-00942: table or view does not exist 
+
+Table dropped.
 
 
-DROP TABLE DPE CASCADE CONSTRAINT
-           *
-ERROR at line 1:
-ORA-00942: table or view does not exist 
-
+Table dropped.
 
