@@ -1,0 +1,103 @@
+
+Table created.
+
+SQL> DESC AGENCE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IDAGENCE                                  NOT NULL NUMBER
+ NOM                                       NOT NULL VARCHAR2(50)
+ ADRESSE                                   NOT NULL VARCHAR2(255)
+ CONTACT                                   NOT NULL VARCHAR2(255)
+
+SQL> set echo off
+
+Table created.
+
+SQL> DESC PROPRIETAIRE
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IDPROPRI                                  NOT NULL NUMBER
+ NOM                                       NOT NULL VARCHAR2(50)
+ PRENOM                                    NOT NULL VARCHAR2(50)
+ TEL                                       NOT NULL CHAR(10)
+ MAIL                                               VARCHAR2(255)
+ IBAN                                      NOT NULL VARCHAR2(34)
+
+SQL> set echo off
+  CONSTRAINT UC_tel UNIQUE (tel),
+  *
+ERROR at line 10:
+ORA-00907: missing right parenthesis 
+
+
+SQL> DESC LOCATAIRE
+ERROR:
+ORA-04043: object LOCATAIRE does not exist 
+
+
+SQL> set echo off
+
+Table created.
+
+SQL> DESC SYNDIC
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IDSYNDIC                                  NOT NULL NUMBER
+ NOM                                       NOT NULL VARCHAR2(50)
+ PRENOM                                    NOT NULL VARCHAR2(50)
+ CONTACT                                   NOT NULL VARCHAR2(255)
+
+SQL> set echo off
+
+Table created.
+
+SQL> DESC BIEN
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IDBIEN                                    NOT NULL NUMBER
+ ADRESSE                                   NOT NULL VARCHAR2(255)
+ TYPEBAIL                                  NOT NULL NUMBER(1)
+ SURFACE                                   NOT NULL NUMBER
+ IDAGENCE                                  NOT NULL NUMBER
+ IDPROPRI                                  NOT NULL NUMBER
+ IDSYNDIC                                  NOT NULL NUMBER
+
+SQL> set echo off
+
+Table created.
+
+SQL> DESC LOCATION
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ IDLOCATION                                NOT NULL NUMBER
+ DATEDEBUT                                 NOT NULL DATE
+ DATEPREVFIN                               NOT NULL DATE
+ DATEFIN                                            DATE
+ IDLOCATAIRE                               NOT NULL NUMBER
+ IDBIEN                                    NOT NULL NUMBER
+
+SQL> set echo off
+  retour       VARCHAR2,
+                       *
+ERROR at line 6:
+ORA-00906: missing left parenthesis 
+
+
+SQL> DESC VISITE
+ERROR:
+ORA-04043: object VISITE does not exist 
+
+
+SQL> set echo off
+  mention         VARCHAR2,
+                          *
+ERROR at line 10:
+ORA-00906: missing left parenthesis 
+
+
+SQL> DESC DPE
+ERROR:
+ORA-04043: object DPE does not exist 
+
+
+SQL> set echo off

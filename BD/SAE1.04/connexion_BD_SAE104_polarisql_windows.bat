@@ -12,7 +12,7 @@ set USER_PWD=x5xvdpq28r
 :: Chemin absolu vers le dossier décomprimé
 :: exemple : 
 :: SQLPLUS_PATH=\\qi\jmalki01\Windows\Bureau\Oracle-Windows-InstantClient_12_1
-set SQLPLUS_PATH="C:\Program Files\Oracle-Windows-InstantClient_12_1"
+set SQLPLUS_PATH=C:\Program Files\Oracle-Windows-InstantClient_12_1
 
 ::--------------------------------------------------------------------
 :: Ne pas modifier

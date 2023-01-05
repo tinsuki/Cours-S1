@@ -16,9 +16,9 @@ ALTER TABLE Bien
     REFERENCES Agence (idAgence);
 
 ALTER TABLE Bien
-  ADD CONSTRAINT FK_Propriétaire_TO_Bien
-    FOREIGN KEY (idProprietaire)
-    REFERENCES Proprietaire (idProprietaire);
+  ADD CONSTRAINT FK_Proprietaire_TO_Bien
+    FOREIGN KEY (idPropri)
+    REFERENCES Proprietaire (idPropri);
 
 ALTER TABLE Bien
   ADD CONSTRAINT FK_syndic_TO_Bien
@@ -32,6 +32,16 @@ ALTER TABLE Location
 
 ALTER TABLE Location
   ADD CONSTRAINT FK_Bien_TO_Location
+    FOREIGN KEY (idBien)
+    REFERENCES Bien (idBien);
+
+ALTER TABLE Visite
+  ADD CONSTRAINT FK_Bien_TO_Visite
+    FOREIGN KEY (idBien)
+    REFERENCES Bien (idBien);
+
+ALTER TABLE DPE
+  ADD CONSTRAINT FK_Bien_TO_DPE
     FOREIGN KEY (idBien)
     REFERENCES Bien (idBien);
 
