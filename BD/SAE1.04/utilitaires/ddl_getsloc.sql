@@ -5,10 +5,7 @@
 -- date         : 19/11/22
 -- role         : créer les tables de la bd gestloc sans les dépendances de référence
 -- projet       : gestloc
--- resultat dans: ddl_gestloc.out
 -- ==========================
-
-spool ddl_gestloc.out
 
 CREATE TABLE AGENCE
 (
@@ -110,11 +107,12 @@ set echo off
 
 CREATE TABLE VISITE
 (
+  idVisite     NUMBER   NOT NULL,
   idBien       NUMBER   NOT NULL,
   dateVisite   DATE     NOT NULL,
   heure        NUMBER   NOT NULL,
   retour       VARCHAR2(500),
-  CONSTRAINT PK_visite PRIMARY KEY (idBien, dateVisite, heure),
+  CONSTRAINT PK_visite PRIMARY KEY (idVisite),
   CONSTRAINT CHK_heure CHECK (heure >= 0.0 and heure <= 24.0)
 );
 
@@ -124,15 +122,16 @@ set echo off
 
 CREATE TABLE DPE
 (
+  idDPE           NUMBER NOT NULL,
   idBien          NUMBER   NOT NULL,
   dateDebut       DATE     NOT NULL,
-  DAdateFin       DATE     NOT NULL,
+  dateFin         DATE     NOT NULL,
   classeEnergie   CHAR     NOT NULL,
   classeClimat    CHAR     NOT NULL,
   consomation     NUMBER   NOT NULL,
   emissions       NUMBER   NOT NULL,
   mention         VARCHAR2(30),
-  CONSTRAINT PK_DPE PRIMARY KEY (IDBIEN, DATEDEBUT),
+  CONSTRAINT PK_DPE PRIMARY KEY (IDDPE),
   CONSTRAINT CHK_classeEnergie CHECK (classeEnergie >= 'A' and classeEnergie <= 'G'),
   CONSTRAINT CHK_classeClimat CHECK (classeClimat >= 'A' and classeClimat <= 'G'),
   CONSTRAINT CHK_conso CHECK (consomation >= 0),
@@ -142,5 +141,3 @@ CREATE TABLE DPE
 set echo on
 DESC DPE
 set echo off
-
-spool off

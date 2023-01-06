@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
-    "zoomLevel": 1,
+    "scrollTop": -373.33333333333405,
+    "scrollLeft": -578.0052083333334,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -451,7 +451,7 @@
           "active": false,
           "left": 1491.8599,
           "top": 441.0381,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 68.66395568847656,
           "widthComment": 60
         },
@@ -736,7 +736,7 @@
           "active": false,
           "left": 770.5932,
           "top": 869.3192,
-          "zIndex": 7,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -913,7 +913,7 @@
           "active": false,
           "left": 1499.0722,
           "top": 864.6144,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 65.9859619140625,
           "widthComment": 60
         },
@@ -925,8 +925,8 @@
         "comment": "",
         "columns": [
           {
-            "name": "IDBIEN",
-            "comment": "id du bien concerne",
+            "name": "IDVISITE",
+            "comment": "cle primaire",
             "dataType": "NUMBER",
             "default": "",
             "option": {
@@ -937,9 +937,32 @@
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
-              "pfk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74.26689147949219,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "60ad6c2b-4a8d-458c-9894-27f246972b51"
+          },
+          {
+            "name": "IDBIEN",
+            "comment": "id du bien concerne",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
               "widthName": 60,
               "widthComment": 120,
               "widthDataType": 60,
@@ -954,13 +977,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 71.28994750976562,
@@ -977,13 +1000,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1019,9 +1042,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 264.6852,
+          "left": 264.0185,
           "top": 1416.2984,
-          "zIndex": 8,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1033,8 +1056,8 @@
         "comment": "",
         "columns": [
           {
-            "name": "IDBIEN",
-            "comment": "id du bien concerne",
+            "name": "IDDPE",
+            "comment": "cle primaire",
             "dataType": "NUMBER",
             "default": "",
             "option": {
@@ -1045,9 +1068,32 @@
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
-              "pfk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74.26689147949219,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "aff73921-7a9f-467a-b94d-b680eefd8d51"
+          },
+          {
+            "name": "IDBIEN",
+            "comment": "id du bien concerne",
+            "dataType": "NUMBER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
               "widthName": 60,
               "widthComment": 120,
               "widthDataType": 60,
@@ -1062,13 +1108,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 74.98194885253906,
@@ -1148,7 +1194,7 @@
             "id": "38173bf2-08b4-4baa-862b-38db68ecef1c"
           },
           {
-            "name": "CONSO",
+            "name": "CONSOMATION",
             "comment": "consomation en kW/h par m2 par an",
             "dataType": "NUMBER",
             "default": "",
@@ -1163,7 +1209,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 98.13494873046875,
               "widthComment": 120,
               "widthDataType": 60,
               "widthDefault": 60
@@ -1171,7 +1217,7 @@
             "id": "43688293-5d3e-4568-826a-f860666878c7"
           },
           {
-            "name": "EMISS",
+            "name": "EMISSIONS",
             "comment": "emission de CO2 en kg/m2 par an",
             "dataType": "NUMBER",
             "default": "",
@@ -1186,7 +1232,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 71.27696228027344,
               "widthComment": 120,
               "widthDataType": 60,
               "widthDefault": 60
@@ -1219,9 +1265,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1265.132,
-          "top": 1397.5581,
-          "zIndex": 4,
+          "left": 1266.4654,
+          "top": 1346.8915,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1246,7 +1292,7 @@
             "81dc6fe4-be6f-477e-9ba9-03e6d2a425c8"
           ],
           "x": 1210.293151171875,
-          "y": 975.5692,
+          "y": 922.4442,
           "direction": "right"
         },
         "end": {
@@ -1263,7 +1309,7 @@
         "id": "81b15014-ce0d-43de-a777-9aa358398e5b"
       },
       {
-        "identification": true,
+        "identification": false,
         "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
@@ -1271,25 +1317,25 @@
           "columnIds": [
             "81dc6fe4-be6f-477e-9ba9-03e6d2a425c8"
           ],
-          "x": 1100.3681633789063,
-          "y": 1081.8192,
-          "direction": "bottom"
+          "x": 1210.293151171875,
+          "y": 1028.6942,
+          "direction": "right"
         },
         "end": {
           "tableId": "2d2e0c3e-b4d6-4610-8cc1-969e4194f945",
           "columnIds": [
             "938dc556-6e1d-44c2-96b9-80e712234c54"
           ],
-          "x": 1265.132,
-          "y": 1514.0581,
-          "direction": "left"
+          "x": 1507.3198311523438,
+          "y": 1346.8915,
+          "direction": "top"
         },
         "constraintName": "fk_bien_to_dpe",
         "visible": true,
         "id": "1b454cd9-c094-4daf-b4e9-80b4c8236221"
       },
       {
-        "identification": true,
+        "identification": false,
         "relationshipType": "ZeroN",
         "startRelationshipType": "Dash",
         "start": {
@@ -1297,7 +1343,7 @@
           "columnIds": [
             "81dc6fe4-be6f-477e-9ba9-03e6d2a425c8"
           ],
-          "x": 880.5181877929688,
+          "x": 990.4431755859375,
           "y": 1081.8192,
           "direction": "bottom"
         },
@@ -1306,8 +1352,8 @@
           "columnIds": [
             "93978006-d101-4107-9662-fdd1b81f73df"
           ],
-          "x": 717.3260843994141,
-          "y": 1491.7984,
+          "x": 716.6593843994141,
+          "y": 1502.0484,
           "direction": "right"
         },
         "constraintName": "fk_bien_to_visites",

@@ -5,10 +5,7 @@
 -- date         : 19/11/22
 -- role         : créer les dépendances de référence de la base de données gestloc
 -- projet       : gestloc
--- resultat dans: dr_gestloc.out
 -- ==========================
-
-spool dr_gestloc.out
 
 ALTER TABLE Bien
   ADD CONSTRAINT FK_Agence_TO_Bien
@@ -44,5 +41,3 @@ ALTER TABLE DPE
   ADD CONSTRAINT FK_Bien_TO_DPE
     FOREIGN KEY (idBien)
     REFERENCES Bien (idBien);
-
-spool off
