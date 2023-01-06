@@ -128,13 +128,13 @@ CREATE TABLE DPE
   dateFin         DATE     NOT NULL,
   classeEnergie   CHAR     NOT NULL,
   classeClimat    CHAR     NOT NULL,
-  consomation     NUMBER   NOT NULL,
+  CONSOMMATION     NUMBER   NOT NULL,
   emissions       NUMBER   NOT NULL,
   mention         VARCHAR2(30),
   CONSTRAINT PK_DPE PRIMARY KEY (IDDPE),
   CONSTRAINT CHK_classeEnergie CHECK (classeEnergie >= 'A' and classeEnergie <= 'G'),
   CONSTRAINT CHK_classeClimat CHECK (classeClimat >= 'A' and classeClimat <= 'G'),
-  CONSTRAINT CHK_conso CHECK (consomation >= 0),
+  CONSTRAINT CHK_conso CHECK (CONSOMMATION >= 0),
   CONSTRAINT CHK_emissions CHECK (emissions >= 0)
 );
 

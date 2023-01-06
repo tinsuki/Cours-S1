@@ -1,155 +1,78 @@
+SQL> PROMPT fichier resultat du test : testInfoDPEValides.out
+
 fichier resultat du test : testInfoDPEValides.out
+
+SQL> -- Afficher le contenu des relations de la base de donnees
+SQL> PROMPT Contenu de la base :
+
 Contenu de la base :
+
+SQL> SET echo ON 
 SQL> @ ../../utilitaires/afficher_base_gestloc.sql
+
 SQL> -- ==========================
 SQL> -- fichier      : afficher_base_gestloc.sql
-SQL> -- base	     : gestloc
+SQL> -- base         : gestloc
 SQL> -- auteur(s)    : SIMON Kevin
-SQL> -- date	     : 19/11/22
-SQL> -- role	     : afficher le contenu des tables de la bd gestloc
-SQL> -- projet	     : gestloc
+SQL> -- date         : 19/11/22
+SQL> -- role         : afficher le contenu des tables de la bd gestloc
+SQL> -- projet       : gestloc
 SQL> -- ==========================
-SQL> 
 SQL> SELECT * FROM AGENCE;
 
-  IDAGENCE NOM                                                                  
----------- --------------------------------------------------                   
-ADRESSE                                                                         
---------------------------------------------------------------------------------
-CONTACT                                                                         
---------------------------------------------------------------------------------
-         1 AgenceExemple                                                        
-La Rochelle                                                                     
-AgenceImmoLaRochelle@example.com                                                
-                                                                                
-
-SQL> 
+ERROR at line 10:
+Not connected
 SQL> SELECT * FROM PROPRIETAIRE;
 
-  IDPROPRI NOM                                                                  
----------- --------------------------------------------------                   
-PRENOM                                             TEL                          
--------------------------------------------------- ----------                   
-MAIL                                                                            
---------------------------------------------------------------------------------
-IBAN                                                                            
-----------------------------------                                              
-         1 SIMON                                                                
-Laurent                                            0601010101                   
-SimonLaurent@example.com                                                        
-FR2830003000709164663684Y18                                                     
-                                                                                
-
-SQL> 
+ERROR at line 12:
+Not connected
 SQL> SELECT * FROM LOCATAIRE;
 
-no rows selected
-
-SQL> 
+ERROR at line 14:
+Not connected
 SQL> SELECT * FROM SYNDIC;
 
-  IDSYNDIC NOM                                                                  
----------- --------------------------------------------------                   
-PRENOM                                                                          
---------------------------------------------------                              
-CONTACT                                                                         
---------------------------------------------------------------------------------
-         1 MET                                                                  
-Delphine                                                                        
-MetDelphine@example.com                                                         
-                                                                                
-
-SQL> 
+ERROR at line 16:
+Not connected
 SQL> SELECT * FROM BIEN;
 
-    IDBIEN                                                                      
-----------                                                                      
-ADRESSE                                                                         
---------------------------------------------------------------------------------
-  TYPEBAIL    SURFACE   IDAGENCE   IDPROPRI   IDSYNDIC                          
----------- ---------- ---------- ---------- ----------                          
-         1                                                                      
-La Rochelle                                                                     
-         3         65          1          1          1                          
-                                                                                
-         2                                                                      
-La Rochelle                                                                     
-         3         65          1          1          1                          
-
-    IDBIEN                                                                      
-----------                                                                      
-ADRESSE                                                                         
---------------------------------------------------------------------------------
-  TYPEBAIL    SURFACE   IDAGENCE   IDPROPRI   IDSYNDIC                          
----------- ---------- ---------- ---------- ----------                          
-                                                                                
-         3                                                                      
-La Rochelle                                                                     
-         3         65          1          1          1                          
-                                                                                
-
-SQL> 
+ERROR at line 18:
+Not connected
 SQL> SELECT * FROM LOCATION;
 
-no rows selected
-
-SQL> 
+ERROR at line 20:
+Not connected
 SQL> SELECT * FROM VISITE;
 
-no rows selected
-
-SQL> 
+ERROR at line 22:
+Not connected
 SQL> SELECT * FROM DPE;
 
-     IDDPE     IDBIEN DATEDEBUT  DATEFIN    C C CONSOMATION  EMISSIONS          
----------- ---------- ---------- ---------- - - ----------- ----------          
-MENTION                                                                         
-------------------------------                                                  
-         1          1 23/12/2021 22/12/2031 C C         147         20          
-                                                                                
-                                                                                
-         3          2 23/12/2021 22/12/2031 F F         347         86          
-Passoire Energetique                                                            
-                                                                                
-         2          2 23/12/2011 22/12/2021 F F         347         86          
-Passoire Energetique                                                            
-                                                                                
-
-     IDDPE     IDBIEN DATEDEBUT  DATEFIN    C C CONSOMATION  EMISSIONS          
----------- ---------- ---------- ---------- - - ----------- ----------          
-MENTION                                                                         
-------------------------------                                                  
-         4          3 23/12/2011 22/12/2021 C C         147         20          
-                                                                                
-                                                                                
-
-SQL> 
+ERROR at line 24:
+Not connected
 SQL> -- ============================================================================
-SQL> -- Requete a tester
+SQL> -- Requete a tester 
 SQL> -- ============================================================================
-SQL> 
 SQL> -- Debut de l'affichage du resultat de la requete sur le client SqlPlus
 SQL> prompt 'Resultat de la requete'
+
 'Resultat de la requete'
+
 SQL> @infoDPEValides.sql
+
 SQL> -- ==========================
 SQL> -- fichier      : listeDPEValides.sql
-SQL> -- base	     : gestloc
+SQL> -- base         : gestloc
 SQL> -- auteur(s)    : SIMON Kevin
-SQL> -- date	     : janvier 2023
-SQL> -- role	     : Quel sont les informations energétiques du DPE en cours par logement ?
-SQL> -- projet	     : gestloc
+SQL> -- date         : janvier 2023
+SQL> -- role         : Quel sont les informations energétiques du DPE en cours par logement ?
+SQL> -- projet       : gestloc
 SQL> -- ==========================
-SQL> 
 SQL> SELECT IDBIEN, CLASSEENERGIE, CLASSECLIMAT, CONSOMATION, EMISSIONS, MENTION
   2  FROM BIEN NATURAL JOIN DPE
   3  WHERE DATEFIN > CURRENT_DATE;
 
-    IDBIEN C C CONSOMATION  EMISSIONS MENTION                                   
----------- - - ----------- ---------- ------------------------------            
-         1 C C         147         20                                           
-         2 F F         347         86 Passoire Energetique                      
-
-SQL> 
+ERROR at line 10:
+Not connected
 SQL> -- Fin de l'affichage sur le client SqlPlus
 SQL> SET echo OFF

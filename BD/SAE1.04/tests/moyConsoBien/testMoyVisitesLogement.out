@@ -1,0 +1,128 @@
+fichier resultat du test : testMoyVisitesLogement.out
+Contenu de la base :
+SQL> @ ../../utilitaires/afficher_base_gestloc.sql
+SQL> -- ==========================
+SQL> -- fichier      : afficher_base_gestloc.sql
+SQL> -- base	     : gestloc
+SQL> -- auteur(s)    : SIMON Kevin
+SQL> -- date	     : 19/11/22
+SQL> -- role	     : afficher le contenu des tables de la bd gestloc
+SQL> -- projet	     : gestloc
+SQL> -- ==========================
+SQL> 
+SQL> SELECT * FROM AGENCE;
+
+  IDAGENCE NOM                                                                  
+---------- --------------------------------------------------                   
+ADRESSE                                                                         
+--------------------------------------------------------------------------------
+CONTACT                                                                         
+--------------------------------------------------------------------------------
+         1 AgenceExemple                                                        
+La Rochelle                                                                     
+AgenceImmoLaRochelle@example.com                                                
+                                                                                
+
+SQL> 
+SQL> SELECT * FROM PROPRIETAIRE;
+
+  IDPROPRI NOM                                                                  
+---------- --------------------------------------------------                   
+PRENOM                                             TEL                          
+-------------------------------------------------- ----------                   
+MAIL                                                                            
+--------------------------------------------------------------------------------
+IBAN                                                                            
+----------------------------------                                              
+         1 SIMON                                                                
+Laurent                                            0601010101                   
+SimonLaurent@example.com                                                        
+FR2830003000709164663684Y18                                                     
+                                                                                
+
+  IDPROPRI NOM                                                                  
+---------- --------------------------------------------------                   
+PRENOM                                             TEL                          
+-------------------------------------------------- ----------                   
+MAIL                                                                            
+--------------------------------------------------------------------------------
+IBAN                                                                            
+----------------------------------                                              
+         2 MARTIN                                                               
+Lou                                                0602020202                   
+MartinLou@example.com                                                           
+FR4414508000503575763697X53                                                     
+                                                                                
+
+SQL> 
+SQL> SELECT * FROM LOCATAIRE;
+
+no rows selected
+
+SQL> 
+SQL> SELECT * FROM SYNDIC;
+
+  IDSYNDIC NOM                                                                  
+---------- --------------------------------------------------                   
+PRENOM                                                                          
+--------------------------------------------------                              
+CONTACT                                                                         
+--------------------------------------------------------------------------------
+         1 MET                                                                  
+Delphine                                                                        
+MetDelphine@example.com                                                         
+                                                                                
+
+SQL> 
+SQL> SELECT * FROM BIEN;
+
+    IDBIEN                                                                      
+----------                                                                      
+ADRESSE                                                                         
+--------------------------------------------------------------------------------
+  TYPEBAIL    SURFACE   IDAGENCE   IDPROPRI   IDSYNDIC                          
+---------- ---------- ---------- ---------- ----------                          
+         1                                                                      
+La Rochelle                                                                     
+         3         70          1          1          1                          
+                                                                                
+         2                                                                      
+La Rochelle                                                                     
+         3         70          1          2          1                          
+
+    IDBIEN                                                                      
+----------                                                                      
+ADRESSE                                                                         
+--------------------------------------------------------------------------------
+  TYPEBAIL    SURFACE   IDAGENCE   IDPROPRI   IDSYNDIC                          
+---------- ---------- ---------- ---------- ----------                          
+                                                                                
+
+SQL> 
+SQL> SELECT * FROM LOCATION;
+
+no rows selected
+
+SQL> 
+SQL> SELECT * FROM VISITE;
+
+no rows selected
+
+SQL> 
+SQL> SELECT * FROM DPE;
+
+no rows selected
+
+SQL> 
+SQL> -- ============================================================================
+SQL> -- Requete a tester
+SQL> -- ============================================================================
+SQL> 
+SQL> -- Debut de l'affichage du resultat de la requete sur le client SqlPlus
+SQL> prompt 'Resultat de la requete'
+'Resultat de la requete'
+SQL> @moyVisitesLogement.sql
+SP2-0310: unable to open file "moyVisitesLogement.sql"
+SQL> 
+SQL> -- Fin de l'affichage sur le client SqlPlus
+SQL> SET echo OFF
