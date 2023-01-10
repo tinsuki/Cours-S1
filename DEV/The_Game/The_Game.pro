@@ -6,7 +6,5 @@ CONFIG -= qt
 SOURCES += \
         functions.cpp \
         typeDef.h \
-        tests.cpp \
-        tests.h \
         functions.h \
         main.cpp
