@@ -7,4 +7,6 @@ SOURCES += \
         functions.cpp \
         typeDef.h \
         functions.h \
+        tests.h \
+        tests.cpp \
         main.cpp

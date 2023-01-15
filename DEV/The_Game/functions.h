@@ -141,4 +141,15 @@ bool isValid(const List * aHand, const int aValue);
  */
 int score(const List* aHand, const List* aStock);
 
+/**
+ * @brief canPlay Check if player can play a card
+ * @param aFundationUpA (List)
+ * @param aFundationUpB (List)
+ * @param aFundationDownA (List)
+ * @param aFundationDownB (List)
+ * @param aHand the hand of the player (List)
+ * @return bool
+ */
+bool canPlay(const List * aFundationUpA, const List * aFundationUpB, const  List * aFundationDownA, const List * aFundationDownB, const List * aHand);
+
 #endif // FUNCTIONS_H

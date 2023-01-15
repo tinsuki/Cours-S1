@@ -2,6 +2,11 @@
 #define TYPEDEF_H
 
 #include <iostream>
+#include <random>
+
+const int MINCARDVALUE = 2;
+const int MAXCARDVALUE = 99;
+const int HANDLENTH = 8;
 
 /*
  * Element of a list

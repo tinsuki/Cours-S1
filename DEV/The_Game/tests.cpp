@@ -348,14 +348,25 @@ void test_displayList()
     int pass = 0;
     int failed = 0;
     cout << "********* Start testing of displayList *********" << endl;
-    if (false)
+    List * list = new List;
+    initList(list, 1, 2, 3);
+    std::cout << "Display : ";
+    displayList(list);
+    std::cout << "the display may be like this : 1  2  3" << std::endl << "Is the display good ? (y/n) :";
+    std::string input;
+    while (!(std::cin >> input) || (input!="y" && input!="n" && input!="Y" && input!="N")){
+        std::cin.clear();
+        std::cin.ignore();
+        std::cout << "Input Error," << std::endl << "Is the display good ? (y/n) :";
+    }
+    if (input=="y" || input=="Y")
     {
-        cout << "PASS \t: xxx" << endl;
+        cout << "PASS \t: 1  2  3" << endl;
         pass++;
     }
     else
     {
-        cout << "FAIL! \t: xxx" << endl;
+        cout << "FAIL! \t: 1  2  3" << endl;
         failed++;
     }
     cout << "Totals: " << pass << " passed, " << failed << " failed" << endl;
@@ -370,7 +381,10 @@ void test_deleteList()
 {
     int pass = 0;
     int failed = 0;
+    List * list = new List;
+    initList(list, 1, 2, 3);
     cout << "********* Start testing of deleteList *********" << endl;
+    deleteList(list);
     if (false)
     {
         cout << "PASS \t: xxx" << endl;
