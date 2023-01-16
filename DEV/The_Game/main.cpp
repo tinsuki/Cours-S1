@@ -1,6 +1,7 @@
 #include <iostream>
 #include "typeDef.h"
 #include "functions.h"
+#include <chrono>
 #include "tests.h"
 
 int main()
@@ -60,7 +61,12 @@ int main()
     int nbMoove = 0;
     char fundation = 'f';
     char playing = 'y';
+    std::chrono::system_clock::time_point begin = std::chrono::high_resolution_clock::now();
     shuffle(stock);
+    std::chrono::system_clock::time_point end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration time = end - begin;
+    long ns = std::chrono::duration_cast<std::chrono::microseconds> (time).count();
+
     for (int i = 0; i < HANDLENTH; i++){
         Element *toAdd = new Element;
         if (toAdd == nullptr){
@@ -134,7 +140,8 @@ int main()
         }
     }
     std::cout << "Game finished," << std::endl << "your score is " << score(hand, stock) << std::endl;
-
+    CLEARSCREEN;
+    std::cout << ns << std::endl;
     deleteList(hand);
     deleteList(fundationUpA);
     deleteList(fundationUpB);
