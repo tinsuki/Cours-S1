@@ -24,6 +24,7 @@ const int MINCARDVALUE = 2;
 const int MAXCARDVALUE = 99;
 const int HANDLENTH = 8;
 const int MAXSTOCKSIZE = MAXCARDVALUE-MINCARDVALUE+1;
+const int TERMSIZE = 80;
 
 
 /*

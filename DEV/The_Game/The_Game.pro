@@ -4,9 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        GameUtils.cpp \
         functions.cpp \
+        tests.cpp \
+        main.cpp
+
+HEADERS += \
         typeDef.h \
         functions.h \
         tests.h \
-        tests.cpp \
-        main.cpp
+        GameUtils.h

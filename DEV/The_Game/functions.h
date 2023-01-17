@@ -2,6 +2,7 @@
 #define FUNCTIONS_H
 
 #include "typeDef.h"
+#include "GameUtils.h"
 
 /*
  * Utility functions for data structure (based on STL API)
@@ -83,15 +84,6 @@ void putACard(List * aList, const int aCard);
 void shuffle(List * aList);
 
 /*
- * Display a game board
- * use displayList
- * param: fundations (up and down)
- * param: a stock (stack)
- * param: the player hand (list)
- */
-void displayBoard(const List * aFundationUpA, const List * aFundationUpB, const  List * aFundationDownA, const List * aFundationDownB, const List * aHand);
-
-/*
  * Move a card on a fundation up if possible
  * Condition: the value of the card is greater than the one on the top
  * or the value of the card is 10 lower than the top of the fundation.
@@ -152,4 +144,12 @@ int score(const List* aHand, const List* aStock);
  */
 bool canPlay(const List * aFundationUpA, const List * aFundationUpB, const  List * aFundationDownA, const List * aFundationDownB, const List * aHand);
 
+/**
+ * @brief sendToBegin, send the element of index to first element
+ * @param aList, List *, pointer to a List, the list
+ * @param index, int, > 0 and < aList->size, the index of the element
+ */
+void sendToBegin(List *aList, int index);
+
+void tryShuffleDiffSize();
 #endif // FUNCTIONS_H
