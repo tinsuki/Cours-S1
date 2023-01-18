@@ -109,10 +109,10 @@ int main()
 
                         // tell if the movement was made and remove the card from the hand if true
                         if (move == false){
-                            std::cout << "la carte ne peut pas etre joué sur la fondation choisie." << std::endl;
+                            std::cout << "The choosen card can't be played on the choosen fundation" << std::endl;
                         }
                         else {
-                            std::cout << "la carte est jouee." << std::endl;
+                            std::cout << "The card is played." << std::endl;
                             remove(hand, cardValue);
                             nbMoove++;
                         }
@@ -126,7 +126,7 @@ int main()
 
                     std::cout << "Number of Movement for this turn : " << nbMoove << std::endl;
                     std::cout << "Do you want to continue this turn ? (you must, at least, have done 2 movements) (y/n) : ";
-                    while ((!(std::cin >> playing)) && (playing =='y' || playing == 'n' || playing == 'Y' || playing == 'N')){
+                    while ((!(std::cin >> playing)) && !(playing =='y' || playing == 'n' || playing == 'Y' || playing == 'N')){
                         std::cout << "Input Error, input accepted : Y | y | N | n" << std::endl;
                         std::cout << "Do you want to continue this turn ? (you must, have done 2 movements) (y/n) : ";
                         std::cin.clear();
