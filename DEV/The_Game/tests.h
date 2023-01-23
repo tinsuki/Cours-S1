@@ -1,6 +1,8 @@
 #ifndef TESTS_H
 #define TESTS_H
 
+#include "typeDef.h"
+
 /*
  * Utility functions for data structure (based on STL API)
  */
@@ -27,4 +29,5 @@ void test_play();
 void test_isValid();
 void test_score();
 
+void shuffleTime(void (* shuffle)(List *));
 #endif // TESTS_H

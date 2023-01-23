@@ -151,5 +151,16 @@ bool canPlay(const List * aFundationUpA, const List * aFundationUpB, const  List
  */
 void sendToBegin(List *aList, int index);
 
+/**
+ * @brief shuffle2, same as shuffle but with aList.size iteration instead of aList.size/2
+ * @param aList, List *, pointer to a List, the list to shuffle
+ */
+void shuffle2(List * aList);
+
+/**
+ * @brief tryShuffleDiffSize, show the number of differencesof the two versions of shuffe function
+ */
 void tryShuffleDiffSize();
+
+
 #endif // FUNCTIONS_H

@@ -5,6 +5,7 @@ using namespace std;
 #include "typeDef.h"
 #include "functions.h"
 #include "GameUtils.h"
+#include <chrono>
 
 /*
  * Utility functions for tests
@@ -946,4 +947,17 @@ void test_score()
     cout << "********* Finished testing of score *********" << endl;
     delete stock;
     delete hand;
+}
+
+void shuffleTime(void (* shuffle)(List *)){
+    List *list = new List;
+    if (list == nullptr){
+        exit(EXIT_FAILURE);
+    }
+    std::chrono::system_clock::time_point begin = std::chrono::high_resolution_clock::now();
+    shuffle(list);
+    std::chrono::system_clock::time_point end = std::chrono::high_resolution_clock::now();
+    long long time = std::chrono::duration_cast<std::chrono::microseconds> (end-begin).count();
+    std::cout << "Shuffle Time : " << time << "ms" << std::endl;
+
 }

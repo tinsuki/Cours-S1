@@ -195,6 +195,7 @@ int main()
         }
 
         else if (choice == 2){
+            // execute each test and wait for input to go to next
             CLEARSCREEN;
             test_push();
             std::cin.clear();
@@ -255,9 +256,16 @@ int main()
         }
 
         else if (choice == 4){
+            // only for develloper, show the differences between shuffle with aList.size iterations
+            // and aList.size/2 iterations;
             CLEARSCREEN;
             std::cout << "tryShuffleDiffSize" << std::endl;
             tryShuffleDiffSize();
+            std::cout << std::endl;
+            std::cout << "shuffle with size/2 iteration : " << std::endl;
+            shuffleTime(&shuffle);
+            std::cout << "shuffle with size iteration : " << std::endl;
+            shuffleTime(&shuffle2);
             std::cin.clear();
             std::cin.ignore();
             std::cin.get();

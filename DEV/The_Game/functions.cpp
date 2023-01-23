@@ -270,7 +270,7 @@ void shuffle2(List * aList){
 void tryShuffleDiffSize(){
     int nbDif1 = 0;
     int nbDif2 = 0;
-    for (int i = 0; i < 10000; i++){
+    for (int i = 0; i < 1000; i++){
         List *listA = new List;
         if (listA == nullptr){
             exit(EXIT_FAILURE);
@@ -326,8 +326,8 @@ void tryShuffleDiffSize(){
         delete listB;
         delete listB2;
     }
-    std::cout << "Shuffle 1 (size) diff : " << nbDif1/10000 << std::endl;
-    std::cout << "Shuffle 2 (size/2) diff : " << nbDif2/10000 << std::endl;
+    std::cout << "Shuffle 1 (size) diff : " << nbDif1/1000 << std::endl;
+    std::cout << "Shuffle 2 (size/2) diff : " << nbDif2/1000 << std::endl;
 
 
 
