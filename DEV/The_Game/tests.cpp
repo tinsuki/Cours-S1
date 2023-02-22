@@ -961,3 +961,15 @@ void shuffleTime(void (* shuffle)(List *)){
     std::cout << "Shuffle Time : " << time << "ms" << std::endl;
 
 }
+
+void testShuffleDiff(void (*shuffle)(List *)){
+    List *list = new  List;
+    if (list == nullptr){
+        exit(EXIT_FAILURE);
+    }
+    shuffle(list);
+    displayList(list);
+    std::cout << std::endl;
+    shuffle(list);
+    displayList(list);
+}

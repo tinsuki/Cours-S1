@@ -30,4 +30,5 @@ void test_isValid();
 void test_score();
 
 void shuffleTime(void (* shuffle)(List *));
+void testShuffleDiff(void (*shuffle)(List *));
 #endif // TESTS_H

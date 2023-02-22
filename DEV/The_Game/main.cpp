@@ -266,6 +266,9 @@ int main()
             shuffleTime(&shuffle);
             std::cout << "shuffle with size iteration : " << std::endl;
             shuffleTime(&shuffle2);
+            for (int i = 0; i < 4; i++){
+                testShuffleDiff(shuffle);
+            }
             std::cin.clear();
             std::cin.ignore();
             std::cin.get();

@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
-    "scrollLeft": 0,
-    "zoomLevel": 1,
+    "scrollTop": -578.0000000000001,
+    "scrollLeft": -298.00520833333303,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -189,7 +189,7 @@
           "active": false,
           "left": 28.1482,
           "top": 889.1125,
-          "zIndex": 3,
+          "zIndex": 1,
           "widthName": 90.03594970703125,
           "widthComment": 60
         },
@@ -297,7 +297,7 @@
           "active": false,
           "left": 354.6285,
           "top": 423.634,
-          "zIndex": 9,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -451,7 +451,7 @@
           "active": false,
           "left": 1491.8599,
           "top": 441.0381,
-          "zIndex": 5,
+          "zIndex": 3,
           "widthName": 68.66395568847656,
           "widthComment": 60
         },
@@ -559,7 +559,7 @@
           "active": false,
           "left": 985.0695,
           "top": 350.5997,
-          "zIndex": 11,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -736,7 +736,7 @@
           "active": false,
           "left": 769.8525,
           "top": 866.3567,
-          "zIndex": 20,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -913,7 +913,7 @@
           "active": false,
           "left": 1499.0722,
           "top": 864.6144,
-          "zIndex": 4,
+          "zIndex": 2,
           "widthName": 65.9859619140625,
           "widthComment": 60
         },
@@ -1044,7 +1044,7 @@
           "active": false,
           "left": 264.0185,
           "top": 1416.2984,
-          "zIndex": 7,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1267,7 +1267,7 @@
           "active": false,
           "left": 1266.4654,
           "top": 1346.8915,
-          "zIndex": 8,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1430,7 +1430,7 @@
           "columnIds": [
             "f82310fb-25df-4697-926f-961a3b8d445b"
           ],
-          "x": 989.7024755859375,
+          "x": 879.7774877929687,
           "y": 866.3567,
           "direction": "top"
         },
@@ -1456,8 +1456,8 @@
           "columnIds": [
             "0a6e5108-509c-4ccc-bc19-07789d6d1bde"
           ],
-          "x": 1100.3681633789063,
-          "y": 869.3192,
+          "x": 1099.6274633789062,
+          "y": 866.3567,
           "direction": "top"
         },
         "constraintName": "fk_syndic_to_bien",

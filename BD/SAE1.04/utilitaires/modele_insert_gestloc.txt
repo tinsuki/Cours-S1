@@ -46,8 +46,8 @@ INSERT INTO SYNDIC  (idSyndic, nomSyndic, prenomSyndic, contactSyndic)
 VALUES (2, 'MARTIN', 'François', 'MartinFrançois@example.com');
 
 -- Insertion du Bien
-INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, Loyer, surface)
-Values (1,  2, 2, 2, 'Lyon, France', 3, 385, 25);
+INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, surface)
+Values (1,  2, 2, 2, 'Lyon, France', 3, 25);
 
 
 
@@ -70,12 +70,12 @@ INSERT INTO LOCATAIRE (idLocataire, nomLocataire, prenomLocataire, telLocataire,
 VALUES (2, 'SIMON', 'Laurent', '0620202020', 'SimonLaurent@example.com', 'FRXXXXXXXXXXXXXXXXXXXXXXXXX05');
 
 -- insertion du bien concerné
-INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, Loyer, surface)
-Values (2,  3, 3, 3, 'Paris, France', 3, 385, 25);
+INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, surface)
+Values (2,  3, 3, 3, 'Paris, France', 3, 25);
 
 -- Insertion de la location
-INSERT INTO LOCATION (idLocation, dateDebut, datePrevFin, dateFin, idLocataire, idBien)
-VALUES (1, to_date('20-11-2022', 'dd-mm-yyyy'), to_date('19-11-2025', 'dd-mm-yyyy'), 2, 2);
+INSERT INTO LOCATION (idLocation, dateDebut, datePrevFin, dateFin, idLocataire, idBien, loyer)
+VALUES (1, to_date('20-11-2022', 'dd-mm-yyyy'), to_date('19-11-2025', 'dd-mm-yyyy'), 2, 2, 385);
 
 
 -- Insertion d'une visite
@@ -91,8 +91,8 @@ INSERT INTO SYNDIC  (idSyndic, nomSyndic, prenomSyndic, contactSyndic)
 VALUES (4 'SIMON', 'Kevin', 'SimonKevin@example.com');
 
 -- insertion du bien concerné
-INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, Loyer, surface)
-Values (3,  4, 4, 4, 'La Rochelle, France', 3, 385, 25);
+INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, surface)
+Values (3,  4, 4, 4, 'La Rochelle, France', 3, 25);
 
 -- Insertion de la Visite
 INSERT INTO VISITE (idVisite, idBien, dateVisite, Heure, Retour)
@@ -108,12 +108,12 @@ INSERT INTO PROPRIETAIRE (idPropri, nom, prenom, tel, mail, iban)
 VALUES (5, 'JEAN', 'Mark', '0605050505', 'MazurierYann@example.com', 'FRXXXXXXXXXXXXXXXXXXXXXXX07');
 
 INSERT INTO SYNDIC  (idSyndic, nomSyndic, prenomSyndic, contactSyndic)
-VALUES (5 'MAZURIER', 'Antoine', 'MAzurierAntoine@example.com');
+VALUES (5, 'MAZURIER', 'Antoine', 'MAzurierAntoine@example.com');
 
 -- insertion du bien concerné
-INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, Loyer, surface)
+INSERT INTO BIEN (idBien, idAgence, idPropri, idSyndic, adresse, typeBail, surface)
 Values (4,  5, 5, 5, 'Rochefort, France', 3, 385, 25);
 
 -- Insertion du DPE
-INSERT INTO DPE (idDPE, idBien, dateDebut, dateFin, classeEnergie, classeClimat, consommation, emmissions)
+INSERT INTO DPE (idDPE, idBien, dateDebut, dateFin, classeEnergie, classeClimat, consommation, emissions)
 VALUES(1, 4, to_date('23/12/2011', 'DD/MM/YYYY'), to_date('22/12/2021', 'DD/MM/YYYY'), 'C', 'C', 147, 20);
