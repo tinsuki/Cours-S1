@@ -1,3 +1,4 @@
 
 DEV/build-The_Game-Desktop_Qt_6_4_1_GCC_64bit-Debug/*
 *.pro.user
+*build*
